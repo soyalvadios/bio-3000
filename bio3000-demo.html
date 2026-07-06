@@ -3,33 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laboratorios Bio 3000 | Estudios de Laboratorio en Valle de Chalco</title>
-<meta name="description" content="Laboratorio clínico en Valle de Chalco. Biometría hemática, química sanguínea, perfil tiroideo y más. Agenda tu estudio por WhatsApp.">
-
-<meta property="og:title" content="Laboratorios Bio 3000">
-<meta property="og:description" content="Resultados confiables para cuidar tu salud. Laboratorio clínico en Valle de Chalco, atención directa por WhatsApp.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_MX">
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
-
+<title>Laboratorios Bio 3000 | Análisis Clínicos en Valle de Chalco</title>
+<meta name="description" content="Laboratorio clínico de análisis médicos en Valle de Chalco, Estado de México. Resultados precisos y confiables. Agenda tu estudio por WhatsApp.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
   tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          display: ['Fraunces', 'serif'],
-          body: ['"Source Sans 3"', 'sans-serif'],
+          heading: ['Figtree', 'sans-serif'],
+          body: ['Noto Sans', 'sans-serif'],
         },
         colors: {
-          teal: {
-            950: '#062821',
+          brand: {
+            50: '#ECFEFF',
+            100: '#CFFAFE',
+            200: '#A5F3FC',
+            300: '#67E8F9',
+            400: '#22D3EE',
+            500: '#0891B2',
+            600: '#0E7490',
+            700: '#155E75',
+            800: '#164E63',
+            900: '#0C3B4A',
+          },
+          leaf: {
+            500: '#059669',
+            600: '#047857',
+            50: '#ECFDF5',
           }
+        },
+        boxShadow: {
+          soft: '0 10px 40px -12px rgba(8, 145, 178, 0.25)',
         }
       }
     }
@@ -37,270 +45,416 @@
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Source Sans 3', sans-serif; }
-  h1, h2, h3, .font-display { font-family: 'Fraunces', serif; }
+  body { font-family: 'Noto Sans', sans-serif; }
+  h1, h2, h3, h4, .font-heading { font-family: 'Figtree', sans-serif; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+
+  .wa-ring::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: #25D366;
+    animation: wa-pulse 2.2s ease-out infinite;
+    z-index: -1;
+  }
+  @keyframes wa-pulse {
+    0% { transform: scale(1); opacity: 0.55; }
+    100% { transform: scale(1.9); opacity: 0; }
+  }
+
+  .bg-lab-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.18) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
 </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-white text-brand-900 antialiased">
 
-<!-- Header -->
-<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
-  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
-    <div class="font-display font-bold text-xl text-teal-900">
-      Laboratorios <span class="text-teal-600">Bio 3000</span>
-    </div>
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-      <a href="#estudios" class="hover:text-teal-700 transition">Estudios</a>
-      <a href="#promociones" class="hover:text-teal-700 transition">Promociones</a>
-      <a href="#instalaciones" class="hover:text-teal-700 transition">Instalaciones</a>
-      <a href="#contacto" class="hover:text-teal-700 transition">Contacto</a>
+<!-- HEADER -->
+<header class="sticky top-0 z-40 border-b border-brand-100 bg-white/85 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
+    <a href="#inicio" class="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md">
+      <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-white shadow-soft">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5.5 w-5.5">
+          <path d="M9 3h6v6.5a4 4 0 0 0 .8 2.4l3.6 4.8A3 3 0 0 1 17 21H7a3 3 0 0 1-2.4-4.8l3.6-4.8A4 4 0 0 0 9 9.5V3Z"/>
+          <path d="M8.5 3h7"/>
+          <path d="M9 14h6"/>
+        </svg>
+      </span>
+      <span class="font-heading text-lg font-bold leading-tight text-brand-800 sm:text-xl">
+        Laboratorios <span class="text-brand-500">Bio 3000</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-7 font-heading text-sm font-medium text-brand-700 md:flex">
+      <a href="#estudios" class="transition hover:text-brand-500">Estudios</a>
+      <a href="#instalaciones" class="transition hover:text-brand-500">Instalaciones</a>
+      <a href="#costos" class="transition hover:text-brand-500">Costos</a>
+      <a href="#contacto" class="transition hover:text-brand-500">Contacto</a>
     </nav>
-    <a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios"
-       target="_blank" rel="noopener"
-       class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2.5 rounded-full transition shadow-sm">
-      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.8 9.3 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-      WhatsApp
+
+    <a href="#contacto" class="inline-flex items-center gap-1.5 rounded-full bg-leaf-500 px-4 py-2.5 font-heading text-sm font-semibold text-white shadow-soft transition hover:bg-leaf-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-leaf-500">
+      Agenda tu estudio
     </a>
   </div>
 </header>
 
-<!-- Hero -->
-<section class="relative overflow-hidden bg-gradient-to-b from-teal-50 via-white to-white">
-  <div class="max-w-6xl mx-auto px-5 pt-14 pb-20 md:pt-20 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <span class="inline-block text-xs font-semibold tracking-wide text-teal-700 bg-teal-100 px-3 py-1 rounded-full mb-5">
-        Valle de Chalco, Estado de México
-      </span>
-      <h1 class="font-display text-4xl md:text-5xl font-bold text-teal-950 leading-tight mb-5">
-        Resultados confiables para cuidar tu salud
-      </h1>
-      <p class="text-slate-600 text-lg leading-relaxed mb-8 max-w-md">
-        Laboratorio clínico en Valle de Chalco con atención directa, estudios de rutina y orientación rápida por WhatsApp.
+<!-- FLOATING WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/525574928355?text=Hola%2C%20quiero%20agendar%20un%20estudio%20de%20laboratorio"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chatea por WhatsApp con Laboratorios Bio 3000"
+  class="wa-ring group fixed bottom-5 right-5 z-50 flex h-15 w-15 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition hover:scale-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/40 sm:bottom-7 sm:right-7"
+  style="height:60px;width:60px;"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="h-8 w-8">
+    <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.696 4.605 1.897 6.475L4 29l7.72-1.86A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.75a9.7 9.7 0 0 1-4.95-1.36l-.355-.21-4.583 1.104 1.127-4.46-.232-.365A9.71 9.71 0 0 1 5.25 15c0-5.937 4.817-10.75 10.754-10.75 5.936 0 10.746 4.813 10.746 10.75 0 5.937-4.81 10.75-10.746 10.75Zm5.893-8.048c-.322-.161-1.906-.94-2.202-1.048-.296-.108-.512-.161-.727.161-.215.323-.834 1.048-1.022 1.264-.188.215-.377.242-.699.081-.322-.161-1.358-.5-2.588-1.596-.957-.853-1.603-1.906-1.79-2.228-.188-.323-.02-.497.141-.658.145-.144.322-.377.483-.565.161-.188.215-.323.322-.538.108-.215.054-.404-.027-.565-.081-.161-.727-1.752-.997-2.4-.262-.63-.528-.545-.727-.555l-.619-.011c-.215 0-.564.081-.86.404-.296.323-1.128 1.103-1.128 2.69 0 1.586 1.155 3.119 1.316 3.334.161.215 2.273 3.471 5.508 4.868.769.332 1.369.53 1.837.678.772.246 1.474.211 2.03.128.619-.092 1.906-.78 2.175-1.532.269-.753.269-1.398.188-1.532-.081-.135-.296-.215-.618-.377Z"/>
+  </svg>
+</a>
+
+<main>
+
+  <!-- HERO -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500 text-white">
+    <div class="bg-lab-grid absolute inset-0 opacity-40"></div>
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-leaf-500/30 blur-3xl"></div>
+
+    <div class="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24 lg:py-28">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide ring-1 ring-white/25">
+            Laboratorio clínico en Valle de Chalco
+          </span>
+
+          <h1 class="mt-5 font-heading text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+            Resultados precisos.<br class="hidden sm:block"> Confianza que puedes ver en cada estudio.
+          </h1>
+
+          <p class="mt-5 max-w-xl text-base leading-relaxed text-brand-50/90 sm:text-lg">
+            En Bio 3000 procesamos tus análisis médicos con equipo calibrado y personal certificado,
+            cuidando cada muestra como si fuera de nuestra propia familia.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://wa.me/525574928355?text=Hola%2C%20quiero%20agendar%20un%20estudio%20de%20laboratorio" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 rounded-full bg-leaf-500 px-7 py-3.5 font-heading text-base font-semibold text-white shadow-soft transition hover:bg-leaf-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700 focus-visible:ring-white">
+              Agenda tu estudio
+            </a>
+            <a href="#estudios"
+               class="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/5 px-7 py-3.5 font-heading text-base font-semibold text-white transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              Ver estudios disponibles
+            </a>
+          </div>
+
+          <div class="mt-9 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+            <div class="flex items-center gap-2">
+              <svg class="h-5 w-5 text-leaf-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Personal certificado
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-5 w-5 text-leaf-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Entrega el mismo día*
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-5 w-5 text-leaf-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              2 sucursales en Valle de Chalco
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="mx-auto max-w-sm rounded-3xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-md sm:p-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-brand-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                  <path d="M9 2h6v6l4 8a2 2 0 0 1-1.8 3H6.8A2 2 0 0 1 5 16l4-8V2Z"/>
+                  <path d="M9 13h6"/>
+                </svg>
+              </span>
+              <div>
+                <p class="font-heading text-sm font-semibold">Química Sanguínea 3</p>
+                <p class="text-xs text-brand-50/80">Glucosa · Urea · Creatinina</p>
+              </div>
+            </div>
+            <div class="mt-5 h-px w-full bg-white/20"></div>
+            <div class="mt-5 flex items-center gap-3">
+              <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-leaf-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                  <path d="M12 21s-7-4.7-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.3-9.5 9-9.5 9Z"/>
+                </svg>
+              </span>
+              <div>
+                <p class="font-heading text-sm font-semibold">Biometría Hemática</p>
+                <p class="text-xs text-brand-50/80">Análisis celular completo</p>
+              </div>
+            </div>
+            <p class="mt-6 text-xs leading-relaxed text-brand-50/70">
+              *Sujeto al tipo de estudio solicitado. Consulta tiempos de entrega al agendar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS / ESTUDIOS -->
+  <section id="estudios" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="font-heading text-sm font-semibold uppercase tracking-wide text-leaf-600">Nuestros estudios</span>
+      <h2 class="mt-2 font-heading text-2xl font-bold text-brand-800 sm:text-3xl lg:text-4xl">
+        Estudios de laboratorio para cada necesidad
+      </h2>
+      <p class="mt-3 text-brand-700/80">
+        Contamos con un amplio panel de análisis clínicos, procesados con equipo automatizado y validados por químicos certificados.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios"
-           target="_blank" rel="noopener"
-           class="inline-flex justify-center items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3.5 rounded-full transition shadow-md shadow-teal-600/20">
-          Agenda tu estudio por WhatsApp
-        </a>
-        <a href="#estudios"
-           class="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-teal-800 font-semibold px-6 py-3.5 rounded-full border border-teal-200 transition">
-          Ver estudios disponibles
-        </a>
-      </div>
     </div>
 
-    <!-- Panel de resultados ilustrativo (HTML/CSS) -->
-    <div class="relative">
-      <div class="absolute -top-6 -right-6 w-40 h-40 bg-teal-200/50 rounded-full blur-2xl"></div>
-      <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-sky-200/50 rounded-full blur-2xl"></div>
-      <div class="relative bg-white rounded-2xl shadow-xl shadow-slate-300/40 border border-slate-100 p-6">
-        <div class="flex items-center justify-between mb-5">
-          <div>
-            <p class="text-xs text-slate-400 font-medium">Panel de resultados</p>
-            <p class="font-display font-semibold text-teal-950">Perfil general de salud</p>
+    <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- card template -->
+      <div class="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M9 2h6v6l4 8a2 2 0 0 1-1.8 3H6.8A2 2 0 0 1 5 16l4-8V2Z"/><path d="M9 13h6"/></svg>
+        </span>
+        <h3 class="mt-4 font-heading text-lg font-semibold text-brand-800">Química Sanguínea</h3>
+        <p class="mt-1.5 text-sm text-brand-700/75">Glucosa, urea, creatinina y perfiles ampliados (3, 6 o más elementos).</p>
+      </div>
+
+      <div class="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 21s-7-4.7-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.3-9.5 9-9.5 9Z"/></svg>
+        </span>
+        <h3 class="mt-4 font-heading text-lg font-semibold text-brand-800">Biometría Hemática</h3>
+        <p class="mt-1.5 text-sm text-brand-700/75">Conteo completo de células sanguíneas para diagnóstico general.</p>
+      </div>
+
+      <div class="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.9 4.9 2.8 2.8"/><path d="m16.3 16.3 2.8 2.8"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.9 19.1 2.8-2.8"/><path d="m16.3 7.7 2.8-2.8"/></svg>
+        </span>
+        <h3 class="mt-4 font-heading text-lg font-semibold text-brand-800">Perfil Tiroideo</h3>
+        <p class="mt-1.5 text-sm text-brand-700/75">TSH, T3, T4 libre para evaluar el funcionamiento de tu tiroides.</p>
+      </div>
+
+      <div class="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M7 3h10l1 6-6 6-6-6 1-6Z"/><path d="M9 15v6"/><path d="M15 15v6"/></svg>
+        </span>
+        <h3 class="mt-4 font-heading text-lg font-semibold text-brand-800">Examen General de Orina</h3>
+        <p class="mt-1.5 text-sm text-brand-700/75">Detección de infecciones, función renal y otros indicadores.</p>
+      </div>
+
+      <div class="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 2C8 6 5 10.5 5 14a7 7 0 0 0 14 0c0-3.5-3-8-7-12Z"/></svg>
+        </span>
+        <h3 class="mt-4 font-heading text-lg font-semibold text-brand-800">Perfil Lipídico</h3>
+        <p class="mt-1.5 text-sm text-brand-700/75">Colesterol total, HDL, LDL y triglicéridos.</p>
+      </div>
+
+      <div class="group rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
+        </span>
+        <h3 class="mt-4 font-heading text-lg font-semibold text-brand-800">Otros estudios</h3>
+        <p class="mt-1.5 text-sm text-brand-700/75">Prueba de embarazo, VIH, coproparasitoscópico y más. Consulta disponibilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALACIONES -->
+  <section id="instalaciones" class="bg-brand-50/60 py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="font-heading text-sm font-semibold uppercase tracking-wide text-leaf-600">Instalaciones</span>
+        <h2 class="mt-2 font-heading text-2xl font-bold text-brand-800 sm:text-3xl lg:text-4xl">
+          Un espacio limpio y cómodo para ti
+        </h2>
+        <p class="mt-3 text-brand-700/80">
+          Conoce nuestras áreas de atención, diseñadas para tu comodidad y seguridad en cada visita.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+        <figure class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-brand-200 to-brand-400">
+          <div class="absolute inset-0 flex items-center justify-center text-brand-700/50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-10 w-10"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 15-4.5-4.5L9 18"/></svg>
           </div>
-          <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-sm">B3</div>
-        </div>
+          <figcaption class="absolute inset-x-0 bottom-0 bg-brand-900/60 px-3 py-2 text-xs font-medium text-white backdrop-blur-sm">
+            Recepción
+          </figcaption>
+        </figure>
+
+        <figure class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-leaf-50 to-brand-200">
+          <div class="absolute inset-0 flex items-center justify-center text-brand-700/50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-10 w-10"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 15-4.5-4.5L9 18"/></svg>
+          </div>
+          <figcaption class="absolute inset-x-0 bottom-0 bg-brand-900/60 px-3 py-2 text-xs font-medium text-white backdrop-blur-sm">
+            Sala de espera
+          </figcaption>
+        </figure>
+
+        <figure class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-brand-300 to-brand-600">
+          <div class="absolute inset-0 flex items-center justify-center text-white/40">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-10 w-10"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 15-4.5-4.5L9 18"/></svg>
+          </div>
+          <figcaption class="absolute inset-x-0 bottom-0 bg-brand-900/60 px-3 py-2 text-xs font-medium text-white backdrop-blur-sm">
+            Área de toma de muestra
+          </figcaption>
+        </figure>
+
+        <figure class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-brand-200 to-leaf-500/60">
+          <div class="absolute inset-0 flex items-center justify-center text-brand-700/50">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-10 w-10"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 15-4.5-4.5L9 18"/></svg>
+          </div>
+          <figcaption class="absolute inset-x-0 bottom-0 bg-brand-900/60 px-3 py-2 text-xs font-medium text-white backdrop-blur-sm">
+            Laboratorio de análisis
+          </figcaption>
+        </figure>
+      </div>
+      <p class="mt-4 text-center text-xs text-brand-700/60">Fotografías de muestra — se sustituirán por imágenes reales de las sucursales.</p>
+    </div>
+  </section>
+
+  <!-- COSTOS / PROMOCIONES -->
+  <section id="costos" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="font-heading text-sm font-semibold uppercase tracking-wide text-leaf-600">Costos</span>
+      <h2 class="mt-2 font-heading text-2xl font-bold text-brand-800 sm:text-3xl lg:text-4xl">
+        Precios claros, sin sorpresas
+      </h2>
+      <p class="mt-3 text-brand-700/80">
+        Consulta nuestros precios de referencia. Pregunta por promociones vigentes al agendar tu cita.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-brand-100 shadow-sm">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-brand-600 text-white">
+          <tr>
+            <th class="font-heading px-5 py-3.5 font-semibold sm:px-6">Estudio</th>
+            <th class="font-heading px-5 py-3.5 font-semibold sm:px-6">Precio de referencia</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-brand-100">
+          <tr class="bg-white">
+            <td class="px-5 py-3.5 sm:px-6">Química Sanguínea 3 elementos</td>
+            <td class="px-5 py-3.5 font-heading font-semibold text-brand-700 sm:px-6">$XXX</td>
+          </tr>
+          <tr class="bg-brand-50/40">
+            <td class="px-5 py-3.5 sm:px-6">Biometría Hemática</td>
+            <td class="px-5 py-3.5 font-heading font-semibold text-brand-700 sm:px-6">$XXX</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-5 py-3.5 sm:px-6">Perfil Tiroideo</td>
+            <td class="px-5 py-3.5 font-heading font-semibold text-brand-700 sm:px-6">$XXX</td>
+          </tr>
+          <tr class="bg-brand-50/40">
+            <td class="px-5 py-3.5 sm:px-6">Examen General de Orina</td>
+            <td class="px-5 py-3.5 font-heading font-semibold text-brand-700 sm:px-6">$XXX</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-5 py-3.5 sm:px-6">Perfil Lipídico</td>
+            <td class="px-5 py-3.5 font-heading font-semibold text-brand-700 sm:px-6">$XXX</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl rounded-2xl bg-leaf-50 p-5 text-center ring-1 ring-leaf-500/20 sm:p-6">
+      <p class="font-heading text-sm font-semibold text-leaf-600 sm:text-base">
+        Promoción vigente: paquete de check-up básico — pregunta por precio especial vía WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-brand-800 py-16 text-white sm:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="font-heading text-sm font-semibold uppercase tracking-wide text-brand-200">Contacto</span>
+        <h2 class="mt-2 font-heading text-2xl font-bold sm:text-3xl lg:text-4xl">
+          Estamos para atenderte
+        </h2>
+        <p class="mt-3 text-brand-100/80">
+          Valle de Chalco, Estado de México. Llámanos, escríbenos o agenda directo por WhatsApp.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-2">
         <div class="space-y-4">
-          <div>
-            <div class="flex justify-between text-sm mb-1">
-              <span class="text-slate-500">Glucosa</span>
-              <span class="font-semibold text-teal-700">Normal</span>
+          <div class="flex items-start gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-500/30 text-brand-100">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5.5 w-5.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </span>
+            <div>
+              <p class="font-heading text-sm font-semibold text-white/60">Oficina Tezozómoc</p>
+              <a href="tel:26452178" class="font-heading text-lg font-semibold transition hover:text-brand-200">26-45-21-78</a>
             </div>
-            <div class="h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full w-4/5 bg-teal-500 rounded-full"></div></div>
           </div>
-          <div>
-            <div class="flex justify-between text-sm mb-1">
-              <span class="text-slate-500">Colesterol</span>
-              <span class="font-semibold text-teal-700">Normal</span>
+
+          <div class="flex items-start gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-500/30 text-brand-100">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5.5 w-5.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </span>
+            <div>
+              <p class="font-heading text-sm font-semibold text-white/60">Oficina Av. del Mazo</p>
+              <a href="tel:59716124" class="font-heading text-lg font-semibold transition hover:text-brand-200">59-71-61-24</a>
             </div>
-            <div class="h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full w-3/5 bg-sky-500 rounded-full"></div></div>
           </div>
-          <div>
-            <div class="flex justify-between text-sm mb-1">
-              <span class="text-slate-500">Hemoglobina</span>
-              <span class="font-semibold text-teal-700">Normal</span>
+
+          <div class="flex items-start gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-leaf-500/30 text-leaf-50">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5.5 w-5.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </span>
+            <div>
+              <p class="font-heading text-sm font-semibold text-white/60">Representante médico</p>
+              <a href="tel:5574928355" class="font-heading text-lg font-semibold transition hover:text-brand-200">55-74-92-83-55</a>
             </div>
-            <div class="h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full w-5/6 bg-emerald-500 rounded-full"></div></div>
+          </div>
+
+          <div class="flex items-start gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-500/30 text-brand-100">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5.5 w-5.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
+            <div>
+              <p class="font-heading text-sm font-semibold text-white/60">Correo</p>
+              <a href="mailto:bios3000representantemedico@gmail.com" class="font-heading text-base font-semibold break-all transition hover:text-brand-200">bios3000representantemedico@gmail.com</a>
+            </div>
           </div>
         </div>
-        <div class="mt-6 pt-5 border-t border-slate-100 text-xs text-slate-400">
-          Ejemplo ilustrativo. Resultados reales entregados por tu laboratorio.
+
+        <div class="flex flex-col items-center justify-center rounded-3xl bg-gradient-to-br from-leaf-500 to-brand-600 p-8 text-center shadow-soft sm:p-10">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="h-14 w-14">
+            <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.696 4.605 1.897 6.475L4 29l7.72-1.86A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.75a9.7 9.7 0 0 1-4.95-1.36l-.355-.21-4.583 1.104 1.127-4.46-.232-.365A9.71 9.71 0 0 1 5.25 15c0-5.937 4.817-10.75 10.754-10.75 5.936 0 10.746 4.813 10.746 10.75 0 5.937-4.81 10.75-10.746 10.75Zm5.893-8.048c-.322-.161-1.906-.94-2.202-1.048-.296-.108-.512-.161-.727.161-.215.323-.834 1.048-1.022 1.264-.188.215-.377.242-.699.081-.322-.161-1.358-.5-2.588-1.596-.957-.853-1.603-1.906-1.79-2.228-.188-.323-.02-.497.141-.658.145-.144.322-.377.483-.565.161-.188.215-.323.322-.538.108-.215.054-.404-.027-.565-.081-.161-.727-1.752-.997-2.4-.262-.63-.528-.545-.727-.555l-.619-.011c-.215 0-.564.081-.86.404-.296.323-1.128 1.103-1.128 2.69 0 1.586 1.155 3.119 1.316 3.334.161.215 2.273 3.471 5.508 4.868.769.332 1.369.53 1.837.678.772.246 1.474.211 2.03.128.619-.092 1.906-.78 2.175-1.532.269-.753.269-1.398.188-1.532-.081-.135-.296-.215-.618-.377Z"/>
+          </svg>
+          <h3 class="mt-4 font-heading text-xl font-bold sm:text-2xl">Agenda por WhatsApp</h3>
+          <p class="mt-2 max-w-xs text-sm text-white/85">
+            Respuesta rápida con nuestro representante médico. Sin llamadas, sin esperas.
+          </p>
+          <a href="https://wa.me/525574928355?text=Hola%2C%20quiero%20agendar%20un%20estudio%20de%20laboratorio" target="_blank" rel="noopener noreferrer"
+             class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-heading text-base font-bold text-leaf-600 shadow-lg transition hover:bg-brand-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-leaf-600 focus-visible:ring-white">
+            Escribir por WhatsApp
+          </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Bloque de confianza -->
-<section class="max-w-6xl mx-auto px-5 py-16 grid sm:grid-cols-3 gap-6">
-  <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-    <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4 text-xl">✓</div>
-    <h3 class="font-display font-semibold text-lg text-teal-950 mb-2">Resultados confiables</h3>
-    <p class="text-slate-600 text-sm leading-relaxed">Procesos claros y entrega puntual de tus estudios.</p>
-  </div>
-  <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-    <div class="w-11 h-11 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-4 text-xl">⚡</div>
-    <h3 class="font-display font-semibold text-lg text-teal-950 mb-2">Atención rápida</h3>
-    <p class="text-slate-600 text-sm leading-relaxed">Agenda y resuelve dudas directo por WhatsApp, sin filas ni trámites.</p>
-  </div>
-  <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-    <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4 text-xl">i</div>
-    <h3 class="font-display font-semibold text-lg text-teal-950 mb-2">Información clara</h3>
-    <p class="text-slate-600 text-sm leading-relaxed">Estudios y costos actualizados, sin sorpresas.</p>
-  </div>
-</section>
+</main>
 
-<!-- Servicios / estudios -->
-<section id="estudios" class="bg-slate-50 py-16 border-y border-slate-100">
-  <div class="max-w-6xl mx-auto px-5">
-    <div class="text-center mb-10">
-      <h2 class="font-display text-3xl font-bold text-teal-950 mb-3">Estudios disponibles</h2>
-      <p class="text-slate-500">Los análisis más solicitados, listos cuando los necesitas.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">🩸</div>
-        <p class="font-semibold text-teal-950 text-sm">Biometría hemática</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">🧪</div>
-        <p class="font-semibold text-teal-950 text-sm">Química sanguínea</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">🦋</div>
-        <p class="font-semibold text-teal-950 text-sm">Perfil tiroideo</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">🔬</div>
-        <p class="font-semibold text-teal-950 text-sm">Examen general de orina</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">💧</div>
-        <p class="font-semibold text-teal-950 text-sm">Perfil lipídico</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">📊</div>
-        <p class="font-semibold text-teal-950 text-sm">Glucosa</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">🤰</div>
-        <p class="font-semibold text-teal-950 text-sm">Pruebas prenatales</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition">
-        <div class="text-2xl mb-2">➕</div>
-        <p class="font-semibold text-teal-950 text-sm">Pruebas especiales</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Promociones -->
-<section id="promociones" class="py-16">
-  <div class="max-w-6xl mx-auto px-5">
-    <div class="text-center mb-10">
-      <h2 class="font-display text-3xl font-bold text-teal-950 mb-3">Promociones disponibles</h2>
-      <p class="text-slate-500">Consulta costos actualizados por WhatsApp.</p>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-6">
-      <div class="rounded-2xl p-6 bg-gradient-to-br from-teal-600 to-teal-700 text-white shadow-md">
-        <h3 class="font-display font-semibold text-lg mb-2">Paquete preventivo</h3>
-        <p class="text-teal-50 text-sm mb-5">Estudios básicos para revisión general de salud.</p>
-        <a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios" target="_blank" rel="noopener" class="text-sm font-semibold underline underline-offset-4">Consultar costo →</a>
-      </div>
-      <div class="rounded-2xl p-6 bg-gradient-to-br from-sky-600 to-sky-700 text-white shadow-md">
-        <h3 class="font-display font-semibold text-lg mb-2">Estudios de rutina</h3>
-        <p class="text-sky-50 text-sm mb-5">Análisis frecuentes para seguimiento periódico.</p>
-        <a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios" target="_blank" rel="noopener" class="text-sm font-semibold underline underline-offset-4">Consultar costo →</a>
-      </div>
-      <div class="rounded-2xl p-6 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white shadow-md">
-        <h3 class="font-display font-semibold text-lg mb-2">Control metabólico</h3>
-        <p class="text-emerald-50 text-sm mb-5">Enfoque en glucosa, lípidos y peso.</p>
-        <a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios" target="_blank" rel="noopener" class="text-sm font-semibold underline underline-offset-4">Consultar costo →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Instalaciones -->
-<section id="instalaciones" class="bg-slate-50 py-16 border-y border-slate-100">
-  <div class="max-w-6xl mx-auto px-5">
-    <div class="text-center mb-10">
-      <h2 class="font-display text-3xl font-bold text-teal-950 mb-3">Instalaciones</h2>
-      <p class="text-slate-500">Espacios pensados para tu comodidad.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
-      <div class="rounded-2xl h-40 bg-gradient-to-br from-teal-100 to-teal-200 flex flex-col items-center justify-center gap-2">
-        <span class="text-3xl">🛋️</span>
-        <p class="text-sm font-semibold text-teal-900">Área de recepción</p>
-      </div>
-      <div class="rounded-2xl h-40 bg-gradient-to-br from-sky-100 to-sky-200 flex flex-col items-center justify-center gap-2">
-        <span class="text-3xl">💉</span>
-        <p class="text-sm font-semibold text-sky-900">Toma de muestras</p>
-      </div>
-      <div class="rounded-2xl h-40 bg-gradient-to-br from-emerald-100 to-emerald-200 flex flex-col items-center justify-center gap-2">
-        <span class="text-3xl">🔬</span>
-        <p class="text-sm font-semibold text-emerald-900">Equipo de análisis</p>
-      </div>
-      <div class="rounded-2xl h-40 bg-gradient-to-br from-teal-100 to-sky-200 flex flex-col items-center justify-center gap-2">
-        <span class="text-3xl">🩺</span>
-        <p class="text-sm font-semibold text-teal-900">Atención a pacientes</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contacto -->
-<section id="contacto" class="py-16">
-  <div class="max-w-6xl mx-auto px-5">
-    <div class="text-center mb-10">
-      <h2 class="font-display text-3xl font-bold text-teal-950 mb-3">Contacto</h2>
-      <p class="text-slate-500">Escríbenos directo, sin formularios largos.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mb-10">
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center">
-        <p class="text-xs text-slate-400 mb-1">Oficina Tezozomoc</p>
-        <p class="font-semibold text-teal-950">26-45-21-78</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center">
-        <p class="text-xs text-slate-400 mb-1">Oficina Av. del Mazo</p>
-        <p class="font-semibold text-teal-950">59-71-61-24</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center">
-        <p class="text-xs text-slate-400 mb-1">Representante médico</p>
-        <p class="font-semibold text-teal-950">55-74-92-83-55</p>
-      </div>
-      <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-5 text-center">
-        <p class="text-xs text-slate-400 mb-1">Correo</p>
-        <p class="font-semibold text-teal-950 break-all">bios3000representantemedico@gmail.com</p>
-      </div>
-    </div>
-    <div class="text-center">
-      <a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios"
-         target="_blank" rel="noopener"
-         class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-full transition shadow-md shadow-teal-600/20">
-        Escríbenos por WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-teal-950 text-teal-100 py-10">
-  <div class="max-w-6xl mx-auto px-5 text-center text-sm">
-    <p class="font-display font-semibold text-white mb-1">Laboratorios Bio 3000</p>
-    <p class="text-teal-300 mb-1">Demo de modernización web</p>
-    <p class="text-teal-400">Valle de Chalco, Estado de México</p>
+<!-- FOOTER -->
+<footer class="bg-brand-900 py-8 text-center text-sm text-brand-200/70">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <p class="font-heading font-semibold text-brand-100">Laboratorios Bio 3000</p>
+    <p class="mt-1">Valle de Chalco, Estado de México</p>
+    <p class="mt-3">&copy; 2026 Laboratorios Bio 3000. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/525574928355?text=Hola%20Laboratorios%20Bio%203000,%20quiero%20información%20sobre%20sus%20estudios"
-   target="_blank" rel="noopener"
-   class="fixed bottom-5 right-5 z-50 bg-teal-600 hover:bg-teal-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-teal-900/30 transition">
-  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.8 9.3 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
-</a>
 
 </body>
 </html>
